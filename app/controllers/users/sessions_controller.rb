@@ -12,10 +12,10 @@ class Users::SessionsController < Devise::SessionsController
     resource = User.find_by(username: params[:user][:username])
     if resource && resource.valid_password?(params[:user][:password])
       sign_in(resource_name, resource)
-      
+      redirect_to root_path
     else
       flash[:alert] = 'Invalid username or password.'
-      render :new
+      redirect_to new_user_session_path
     end
   end
   

@@ -1,0 +1,13 @@
+<%= turbo_frame_tag :remote_modal, target: :_top do %>
+  <div class="<%= classes if defined? classes %>">
+    <div id="newModal" class="modal hidden" data-controller="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <%= render render_partial, obj: obj, button: button %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

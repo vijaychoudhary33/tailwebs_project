@@ -1,15 +1,270 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Table container */
+.table-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  /* Styled table */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    table-layout: fixed; /* Ensures columns are of equal width */
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    word-wrap: break-word; /* Handles long text in case of fixed width */
+  }
+  
+  /* Add background for header */
+  .styled-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for rows */
+  .styled-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Action icons */
+  .action-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Add button */
+  .add-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .add-button:hover {
+    background-color: darkgray;
+  }
+  /* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0;
+  margin-bottom: 20px;
+  max-width: 1150px;
+  margin-left: 310px;
+}
+
+/* Left navigation buttons */
+.left-nav {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: darkgray;
+}
+
+/* Right logo section */
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000; /* Change this color as needed */
+  text-transform: uppercase;
+}
+
+/* Style the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown toggle button (3 dots) */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.three-dot {
+  color: #000;
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 150px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 5px;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.dropdown-item a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Icons within dropdown items */
+.drop-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Show the dropdown menu when clicked */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Custom styles for edit, show, delete buttons */
+.btn-edit {
+  color: #007bff;
+}
+
+.btn-show {
+  color: #28a745;
+}
+
+.btn-delete {
+  color: #dc3545;
+}
+
+.dropdown-item:hover .btn-edit {
+  color: #0056b3;
+}
+
+.dropdown-item:hover .btn-show {
+  color: #218838;
+}
+
+.dropdown-item:hover .btn-delete {
+  color: #c82333;
+}
+
+/* Action-td container */
+.action-td {
+  text-align: right;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding: 2em;
+  
+  /* Centering */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+ 
+  background-color: rgb(0,0,0);
+  background-color: rgba(204, 169, 169, 0.1);
+  border-radius: 5px;
+  /* Add the drop shadow */
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.cancel-button {
+  background-color: #1530ff;
+  font-size: 12px;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  text-decoration: none;
+}
+.cancel-button:hover {
+  background-color: #2640fe;
+}
+
+.styled-form {
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn-submit {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #555;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "remote_modal" do %>
+    <%= render partial: "students/form_modal", locals: { obj: @student, render_partial: "students/form", modal_heading: "Add New Student", button: "Save"  } %>
+<% end %>
