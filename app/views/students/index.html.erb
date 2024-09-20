@@ -37,21 +37,11 @@
       <span class="ph--dots-three-bold icons">•••</span>
     </button>
     <ul class="dropdown-menu">
-      <!-- Edit Action -->
       <li class="dropdown-item">
         <%= link_to edit_student_path(student), class: 'btn btn-edit', "data-controller": "customer" do %>
           <span class="material-symbols-light--edit-outline drop-icon">✏️</span> Edit
         <% end %>
       </li>
-      
-      <!-- Show Action -->
-      <li class="dropdown-item">
-        <%= link_to student_path(student), class: 'btn btn-show', data: { turbo: false } do %>
-          <span class="ic--baseline-visibility drop-icon">👁️</span> Show
-        <% end %>
-      </li>
-
-      <!-- Delete Action -->
       <li class="dropdown-item">
        <%= button_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
       </li>

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+# db/seeds.rb
+
+User.create!(
+  username: "test_account",
+  email: "test@gmail.com",
+  password: "123456"
+)
+
+puts "Created teacher: #{teacher.username} with password: 123456"
